@@ -2,12 +2,13 @@ package handlers_test
 
 import (
 	"fmt"
-	nconfig "ketitik/bitbucket-webhook/config"
-	nhandlers "ketitik/bitbucket-webhook/handlers"
 	"net/http"
 	"net/http/httptest"
 	"net/url"
 	"testing"
+
+	nconfig "github.com/ganiamri/go-webhook/config"
+	nhandlers "github.com/ganiamri/go-webhook/handlers"
 
 	"github.com/gorilla/mux"
 )

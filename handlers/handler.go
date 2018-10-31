@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	nconfig "ketitik/bitbucket-webhook/config"
+	nconfig "github.com/ganiamri/go-webhook/config"
 )
 
 // Handler holds the API endpoint's function handler.

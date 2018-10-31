@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	nconfig "ketitik/bitbucket-webhook/config"
+	nconfig "github.com/ganiamri/go-webhook/config"
 )
 
 func TestGetServiceConfigOK(t *testing.T) {

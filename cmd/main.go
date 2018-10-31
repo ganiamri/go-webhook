@@ -1,10 +1,11 @@
 package main
 
 import (
-	nconfig "ketitik/webhook/config"
-	nhandlers "ketitik/webhook/handlers"
 	"log"
 	"net/http"
+
+	nconfig "github.com/ganiamri/go-webhook/config"
+	nhandlers "github.com/ganiamri/go-webhook/handlers"
 
 	"github.com/gorilla/mux"
 )
