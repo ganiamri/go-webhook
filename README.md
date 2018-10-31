@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/<ganiamri/go-webhook.svg?branch=master)](https://travis-ci.org/ganiamri/go-webhook)
+
 # Webhook
 
 Simple API service to executes shell script inside host directory
