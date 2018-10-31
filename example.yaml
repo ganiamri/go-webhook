@@ -1,0 +1,5 @@
+address: localhost:8080
+endpoint: /test/execute
+program_path: /bin/sh
+dir_path: /home/execute
+file_path: deploy.sh
