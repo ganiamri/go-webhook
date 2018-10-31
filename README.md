@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/<ganiamri/go-webhook.svg?branch=master)](https://travis-ci.org/ganiamri/go-webhook)
+[![Build Status](https://travis-ci.com/ganiamri/go-webhook.svg?branch=master)](https://travis-ci.com/ganiamri/go-webhook)
 
 # Webhook
 
