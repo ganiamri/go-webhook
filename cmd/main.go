@@ -28,6 +28,7 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc(config.EndPoint, handler.Execute).Methods("GET")
 
+	log.Println("Running service on ", config.Address)
 	if err := http.ListenAndServe(config.Address, r); err != nil {
 		panic(err)
 	}
