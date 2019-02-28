@@ -1,5 +1,10 @@
 address: localhost:8080
-endpoint: /test/execute
 program_path: /bin/sh
 dir_path: /home/execute
-file_path: deploy.sh
+endpoint: 
+  test_001: 
+    file_path: test-001.sh
+  test_002:
+    file_path: test-002.sh
+  test_003:
+    file_path: test-003.sh

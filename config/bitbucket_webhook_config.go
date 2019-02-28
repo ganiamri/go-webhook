@@ -9,11 +9,15 @@ import (
 
 // ServiceConfig stores the whole configuration for service.
 type ServiceConfig struct {
-	Address     string `yaml:"address"`
-	EndPoint    string `yaml:"endpoint"`
-	ProgramPath string `yaml:"program_path"`
-	DirPath     string `yaml:"dir_path"`
-	FilePath    string `yaml:"file_path"`
+	Address     string                   `yaml:"address"`
+	ProgramPath string                   `yaml:"program_path"`
+	DirPath     string                   `yaml:"dir_path"`
+	EndPoint    map[string]DirectoryFile `yaml:"endpoint"`
+}
+
+// DirectoryFile store file name for execute
+type DirectoryFile struct {
+	FilePath string `yaml:"file_path"`
 }
 
 func getRawConfig(fileLocation string) (*ServiceConfig, error) {

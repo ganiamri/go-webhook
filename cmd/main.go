@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -26,7 +27,9 @@ func main() {
 	handler := nhandlers.NewHandler(config)
 
 	r := mux.NewRouter()
-	r.HandleFunc(config.EndPoint, handler.Execute).Methods("GET")
+	for key := range config.EndPoint {
+		r.HandleFunc(fmt.Sprintf("/%v", key), handler.Execute).Methods("GET")
+	}
 
 	log.Println("Running service on ", config.Address)
 	if err := http.ListenAndServe(config.Address, r); err != nil {
