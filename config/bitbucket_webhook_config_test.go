@@ -20,10 +20,11 @@ func TestGetServiceConfigOK(t *testing.T) {
 	}
 	// Check the source data.
 	assert.Equal(t, "localhost:8080", config.Address, "they should be equal")
-	assert.Equal(t, "/test/execute", config.EndPoint, "they should be equal")
 	assert.Equal(t, "/bin/sh", config.ProgramPath, "they should be equal")
 	assert.Equal(t, "/home/execute", config.DirPath, "they should be equal")
-	assert.Equal(t, "deploy.sh", config.FilePath, "they should be equal")
+	assert.Equal(t, "test-001.sh", config.EndPoint["test_001"].FilePath, "they should be equal")
+	assert.Equal(t, "test-002.sh", config.EndPoint["test_002"].FilePath, "they should be equal")
+	assert.Equal(t, "test-003.sh", config.EndPoint["test_003"].FilePath, "they should be equal")
 }
 
 func TestGetServiceConfigNOK(t *testing.T) {

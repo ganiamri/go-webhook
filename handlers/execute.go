@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strings"
 	"time"
 )
 
@@ -16,7 +17,10 @@ func (h *Handler) Execute(w http.ResponseWriter, r *http.Request) {
 	pwd, _ := os.Getwd()
 	dir := filepath.Join(pwd, ".", h.config.DirPath)
 
-	cmd := exec.Command(h.config.ProgramPath, h.config.FilePath)
+	parsed := strings.Split(r.URL.Path, "/")
+	endpoint := parsed[len(parsed)-1]
+
+	cmd := exec.Command(h.config.ProgramPath, h.config.EndPoint[endpoint].FilePath)
 	cmd.Dir = dir
 	err := cmd.Run()
 	if err != nil {
